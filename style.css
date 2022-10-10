@@ -1,0 +1,92 @@
+html, body{
+
+    height: 100%;
+
+    width: 100%;
+
+    margin: 0;
+
+}
+@font-face {
+    font-family: "nascar";
+    src: url("font/Acme-Regular.ttf");
+}
+
+
+.main{
+
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: grid;
+
+    grid-template-rows: 30% 20% 10% 40%;
+
+    grid-template-columns: 25% 25% 25% 25%;
+
+    grid-template-areas:
+    "logo econini econini lien"
+    "vide vide vide vide"
+    "vide vide vide vide"
+    "banniere banniere banniere banniere"
+
+    
+}
+
+.second{
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+.logo{
+    grid-area: logo;
+    display: flex;
+
+
+}
+
+.banniere{
+    grid-area: banniere;
+    display: flex;
+}
+
+.econini{
+    grid-area: econini;
+    display: flex;
+    font-size: 15em;
+    font-family: "nascar";
+    box-shadow: 0px 0px 5px;
+    transition: 1s;
+}
+
+
+.lien{
+    grid-area: lien;
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    transition: 1s;
+}
+
+.lien:hover{
+
+    height: 50%;
+    width: 50%;
+}
+.vide{
+    grid-area: vide;
+    display: flex;
+    text-align: center;
+    animation-name: vide;
+    animation: vide 10s infinite alternate;
+
+}
+@keyframes vide{
+    0% {background-color: green;}
+    25%{background-color: greenyellow;}
+    50%{background-color: violet;}
+    75%{background-color: orange;}
+  100% {background-color: yellow;}
+}
